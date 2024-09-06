@@ -1,31 +1,67 @@
-<<<<<<< HEAD
-# inventory-ui
-=======
-# InventoryUi
+# Inventory UI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+Este proyecto es una aplicación web frontend desarrollada en Angular para gestionar un inventario. La aplicación incluye un módulo principal `Dashboard` con un componente `Home` que sirve como punto de entrada.
 
-## Development server
+## Estructura del Proyecto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+El proyecto sigue una estructura modular que facilita la escalabilidad y el mantenimiento. A continuación se describe la estructura principal:
 
-## Code scaffolding
+- **src/**: Carpeta principal que contiene el código fuente del proyecto.
+  - **app/**: Carpeta que contiene el módulo principal de la aplicación y sus componentes.
+    - **modules/**: Carpeta que contiene los módulos específicos de la aplicación.
+      - **dashboard/**: Módulo que gestiona el dashboard de la aplicación.
+        - **component/**: Carpeta que contiene los componentes específicos del módulo dashboard.
+          - **home/**: Componente `Home` dentro del módulo `Dashboard`.
+        - **pages/**: Carpeta que contiene las páginas principales del módulo `Dashboard`.
+          - **dashboard.component.ts**: Componente principal del módulo `Dashboard`.
+        - **dashboard-routing.module.ts**: Módulo de enrutamiento para el módulo `Dashboard`.
+        - **dashboard.module.ts**: Módulo `Dashboard` que agrupa los componentes y rutas.
+      - **router-child.module.ts**: Módulo que gestiona las rutas secundarias dentro del `Dashboard`.
+    - **app-routing.module.ts**: Módulo de enrutamiento principal de la aplicación.
+    - **app.component.ts**: Componente raíz de la aplicación.
+    - **app.module.ts**: Módulo principal de la aplicación.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Scripts Disponibles
 
-## Build
+En el directorio del proyecto, puedes ejecutar:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### `ng serve`
 
-## Running unit tests
+Inicia la aplicación en modo de desarrollo. Abre [http://localhost:4200](http://localhost:4200) para verlo en el navegador.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### `ng build`
 
-## Running end-to-end tests
+Compila la aplicación para producción en la carpeta `dist/`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### `ng test`
 
-## Further help
+Ejecuta las pruebas unitarias utilizando [Karma](https://karma-runner.github.io).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
->>>>>>> 1f7211a (initial commit)
+### `ng lint`
+
+Ejecuta la herramienta de linting para asegurar que el código siga las mejores prácticas.
+
+## Dependencias
+
+El proyecto utiliza varias dependencias clave:
+
+- **Angular**: Framework principal utilizado para el desarrollo de la aplicación.
+- **Angular Router**: Utilizado para la navegación y enrutamiento dentro de la aplicación.
+- **TypeScript**: Lenguaje utilizado para desarrollar la aplicación.
+
+## Instalación
+
+Para configurar el proyecto en tu entorno local, sigue estos pasos:
+
+1. Clona este repositorio: `git clone https://github.com/yeferson-nova/inventory-ui.git`
+2. Navega al directorio del proyecto: `cd inventory-ui`
+3. Instala las dependencias: `npm install`
+4. Inicia la aplicación: `ng serve`
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Puedes hacerlo a través de pull requests.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT.
